@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guide – Akuru Studio</title>
+<meta name="description" content="See what you can make with Akuru Studio: Sinhala text on photos, styles, templates, stickers, frames and more. English and Sinhala.">
+<link rel="icon" href="icon.png">
+<style>
+:root{--bg:#141219;--panel:#1d1a24;--line:#2e2938;--txt:#ece8f3;--mut:#a59db3;--acc:#ff8a5c;--acc2:#ff5c8a}
+*{box-sizing:border-box}html{color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.7 system-ui,-apple-system,"Segoe UI","Noto Sans Sinhala","Iskoola Pota",sans-serif}
+a{color:var(--acc)}
+html[data-lang=en] [lang=si],html[data-lang=si] [lang=en]{display:none!important}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+.top{display:flex;align-items:center;gap:12px;padding:16px 0}
+.top a.home{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--txt);font-weight:600}
+.top img{width:32px;height:32px;border-radius:8px}
+.top .sp{flex:1}
+.langs{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.langs button{background:none;border:0;color:var(--mut);padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
+.langs button.on{background:var(--panel);color:var(--txt)}
+h1{font-size:36px;line-height:1.2;margin:28px 0 6px;text-align:center}
+.tag{color:var(--mut);text-align:center;margin:0 0 30px;font-size:18px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gal img{width:100%;height:auto;border-radius:12px;display:block;border:1px solid var(--line)}
+.cap{color:var(--mut);font-size:14px;text-align:center;margin:10px 0 0}
+.feat{display:grid;grid-template-columns:1.5fr 1fr;gap:26px;align-items:center;margin:56px 0}
+.feat:nth-of-type(even){grid-template-columns:1fr 1.5fr}
+.feat:nth-of-type(even) figure{order:2}
+.feat figure{margin:0}
+.feat img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+.feat.phone{grid-template-columns:1fr 1.5fr}
+.feat.phone img{max-width:300px;margin:0 auto}
+.feat h2{margin:0 0 8px;font-size:22px;line-height:1.3}
+.feat p{margin:0;color:var(--mut)}
+.n{display:inline-flex;width:28px;height:28px;border-radius:99px;background:linear-gradient(90deg,var(--acc),var(--acc2));color:#1a0f12;font-weight:700;font-size:14px;align-items:center;justify-content:center;margin-right:8px;vertical-align:2px}
+.cta{text-align:center;margin:60px 0 40px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;font-weight:600;text-decoration:none;background:linear-gradient(90deg,var(--acc),var(--acc2));color:#1a0f12}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--mut);font-size:14px;text-align:center}
+footer a{color:var(--mut)}
+@media(max-width:720px){h1{font-size:28px}.gal{grid-template-columns:repeat(2,1fr)}.feat,.feat:nth-of-type(even),.feat.phone{grid-template-columns:1fr;gap:14px;margin:40px 0}.feat:nth-of-type(even) figure{order:0}}
+</style>
+<script>
+(function(){var l='en';try{l=localStorage.getItem('akuru-guide-lang')||((navigator.language||'').toLowerCase().indexOf('si')===0?'si':'en')}catch(e){}
+document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l})();
+</script>
+</head>
+<body>
+<div class="wrap">
+<div class="top">
+ <a class="home" href="./"><img src="icon.png" alt="" width="32" height="32"><span>අකුරු Studio</span></a>
+ <span class="sp"></span>
+ <div class="langs" role="group" aria-label="Language"><button data-l="en">English</button><button data-l="si">සිංහල</button></div>
+</div>
+
+<h1><span lang="en">What you can make</span><span lang="si">ඔබට හදන්න පුළුවන් දේ</span></h1>
+<p class="tag"><span lang="en">Beautiful Sinhala posts in a few taps – here is how.</span><span lang="si">තට්ටු කිහිපයකින් ලස්සන සිංහල posts – මෙන්න මෙහෙමයි.</span></p>
+
+<section class="gal" aria-label="Examples">
+ <img src="guide/ex-birthday.jpg" width="720" height="720" alt="Birthday wish: සුබ උපන්දිනයක් වේවා!">
+ <img src="guide/ex-avurudu.jpg" width="720" height="720" alt="New Year wish: සුබ අලුත් අවුරුද්දක් වේවා!">
+ <img src="guide/ex-goodnight.jpg" width="720" height="720" alt="Good night: සුබ රාත්‍රියක්">
+ <img src="guide/ex-quote.jpg" width="720" height="720" alt="Quote card: ජීවිතය ලස්සනයි" loading="lazy">
+ <img src="guide/ex-sale.jpg" width="720" height="720" alt="Shop sale post" loading="lazy">
+ <img src="guide/ex-vesak.jpg" width="720" height="720" alt="Vesak wish: සුබ වෙසක් මංගල්‍යයක්" loading="lazy">
+</section>
+<p class="cap"><span lang="en">All made in Akuru Studio with its own templates, styles and emoji.</span><span lang="si">සියල්ල අකුරු Studio එකේම templates, මෝස්තර සහ emoji වලින් හැදුවා.</span></p>
+
+<section class="feat">
+ <figure><img src="guide/f-typing.jpg" width="1280" height="800" loading="lazy" alt="Typing aadhareyi ammee shows ආදරෙයි අම්මේ on the picture"></figure>
+ <div>
+  <h2><span class="n">1</span><span lang="en">Type Singlish, get Sinhala</span><span lang="si">Singlish වලින් ටයිප් කරන්න, සිංහල ලැබේ</span></h2>
+  <p lang="en">Type the way you text: <i>aadhareyi ammee</i> becomes ආදරෙයි අම්මේ. Tap 🔤 Guide to see every letter, or pick a quick phrase.</p>
+  <p lang="si">ඔබ SMS ලියන විදිහටම ටයිප් කරන්න: <i>aadhareyi ammee</i> → ආදරෙයි අම්මේ. සියලු අකුරු බලන්න 🔤 Guide ඔබන්න, නැත්නම් ඉක්මන් වාක්‍යයක් තෝරන්න.</p>
+ </div>
+</section>
+
+<section class="feat">
+ <figure><img src="guide/f-styles.jpg" width="1280" height="800" loading="lazy" alt="One-tap text styles"></figure>
+ <div>
+  <h2><span class="n">2</span><span lang="en">One-tap styles and fonts</span><span lang="si">එක තට්ටුවෙන් ලස්සන අකුරු</span></h2>
+  <p lang="en">32 ready styles – outline, glow, gold, neon and boxes. Change the font, colour and size, or add your own fonts. Old FM fonts work too.</p>
+  <p lang="si">සූදානම් මෝස්තර 32ක් – outline, glow, රන්වන්, neon සහ කොටු. අකුරු වර්ගය, පාට සහ ප්‍රමාණය වෙනස් කරන්න, නැත්නම් ඔබේම fonts එකතු කරන්න. පරණ FM fonts ද වැඩ කරයි.</p>
+ </div>
+</section>
+
+<section class="feat">
+ <figure><img src="guide/f-templates.jpg" width="1280" height="800" loading="lazy" alt="Post templates"></figure>
+ <div>
+  <h2><span class="n">3</span><span lang="en">Post templates and social sizes</span><span lang="si">Post templates සහ social media ප්‍රමාණ</span></h2>
+  <p lang="en">Pick a template for a WhatsApp status, Facebook, Instagram or print. Like your own look? Save it under My templates.</p>
+  <p lang="si">WhatsApp status, Facebook, Instagram හෝ print සඳහා template එකක් තෝරන්න. ඔබ හදපු මෝස්තරයට කැමතිද? My templates වල සුරකින්න.</p>
+ </div>
+</section>
+
+<section class="feat">
+ <figure><img src="guide/f-stickers.jpg" width="1280" height="800" loading="lazy" alt="Emoji and stickers"></figure>
+ <div>
+  <h2><span class="n">4</span><span lang="en">Emoji and your own stickers</span><span lang="si">Emoji සහ ඔබේම stickers</span></h2>
+  <p lang="en">All phone emoji with search, plus your own PNG or SVG stickers – for example free ones from openmoji.org.</p>
+  <p lang="si">දුරකථනයේ සියලු emoji, සෙවීමත් සමඟ. ඔබේම PNG හෝ SVG stickers ද එකතු කරන්න – උදාහරණයක් ලෙස openmoji.org වෙතින් නොමිලේ.</p>
+ </div>
+</section>
+
+<section class="feat">
+ <figure><img src="guide/f-frames.jpg" width="1280" height="800" loading="lazy" alt="Neon frame"></figure>
+ <div>
+  <h2><span class="n">5</span><span lang="en">Frames, effects and drawing</span><span lang="si">රාමු, effects සහ ඇඳීම</span></h2>
+  <p lang="en">27 frames including neon, 25 photo effects, brushes and shapes. Making a logo? Use a transparent background and save as PNG.</p>
+  <p lang="si">neon ඇතුළු රාමු 27ක්, photo effects 25ක්, බුරුසු සහ හැඩතල. Logo එකක් හදනවද? විනිවිද පෙනෙන (transparent) පසුබිමක් තෝරා PNG ලෙස සුරකින්න.</p>
+ </div>
+</section>
+
+<section class="feat phone">
+ <figure><img src="guide/f-expand.jpg" width="390" height="780" loading="lazy" alt="Expand mode on a phone"></figure>
+ <div>
+  <h2><span class="n">6</span><span lang="en">Easy editing on your phone</span><span lang="si">දුරකථනයෙන් පහසුවෙන් සකසන්න</span></h2>
+  <p lang="en">Tap 🔍 Expand and the picture fills the screen. Move and resize text with your finger – upright or sideways. Tap ✓ Done to go back.</p>
+  <p lang="si">🔍 Expand ඔබන්න, පින්තූරය මුළු තිරයම පුරවයි. ඇඟිල්ලෙන් අකුරු ගෙනයන්න, ලොකු කරන්න – දුරකථනය කෙළින් හෝ හරස් අතට. ආපසු යන්න ✓ Done ඔබන්න.</p>
+ </div>
+</section>
+
+<section class="feat">
+ <figure><img src="guide/f-save.jpg" width="1280" height="800" loading="lazy" alt="Save your image"></figure>
+ <div>
+  <h2><span class="n">7</span><span lang="en">Save, print and keep working</span><span lang="si">සුරකින්න, print කරන්න, පසුව නැවත වැඩ කරන්න</span></h2>
+  <p lang="en">Save as PNG or JPG, print, or make a PDF. Your last design is kept for you, and 📁 Project saves a file you can edit later on any device.</p>
+  <p lang="si">PNG හෝ JPG ලෙස සුරකින්න, print කරන්න හෝ PDF එකක් හදන්න. ඔබේ අවසාන design එක ස්වයංක්‍රීයව තබා ගනී. 📁 Project මගින් ඕනෑම උපාංගයක පසුව සංස්කරණය කළ හැකි file එකක් සුරකින්න.</p>
+ </div>
+</section>
+
+<div class="cta"><a class="btn" href="app/"><span lang="en">✏️ Open Akuru Studio</span><span lang="si">✏️ අකුරු Studio විවෘත කරන්න</span></a>
+ <p class="cap"><span lang="en">Free · no account · your photos never leave your device</span><span lang="si">නොමිලේ · ගිණුමක් අවශ්‍ය නැත · ඔබේ ඡායාරූප ඔබේ උපාංගයෙන් පිටතට යන්නේ නැත</span></p></div>
+</div>
+<footer><div class="wrap">© 2026 Aduruge Software · v1.13.1 · <a href="mailto:aduruge@gmail.com">aduruge@gmail.com</a> · <a href="privacy.html">Privacy</a></div></footer>
+<script>
+(function(){var bs=document.querySelectorAll('.langs button');function set(l,save){document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;
+for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i].getAttribute('data-l')===l);if(save)try{localStorage.setItem('akuru-guide-lang',l)}catch(e){}}
+for(var i=0;i<bs.length;i++)bs[i].onclick=function(){set(this.getAttribute('data-l'),true)};set(document.documentElement.getAttribute('data-lang'))})();
+</script>
+</body>
+</html>

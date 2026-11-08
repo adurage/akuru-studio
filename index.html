@@ -23,6 +23,8 @@ h1 b{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background
 .btn.pri{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#1a0f12;border:0}
 .btn.off{opacity:.6;pointer-events:none}
 .note{color:var(--mut);font-size:14px;text-align:center}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:34px 0 0}
+.shots img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:40px 0}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
 .card h3{margin:0 0 6px;font-size:17px}.card p{margin:0;color:var(--mut);font-size:15px}
@@ -41,10 +43,17 @@ footer a{color:var(--mut)}
  <p class="si">ammaa → අම්මා</p>
  <div class="cta">
   <a class="btn pri" href="app/">✏️ Open Akuru Studio</a>
+  <a class="btn" href="guide.html">📖 Guide – what you can make</a>
   <a class="btn off" id="cws" href="#" aria-disabled="true">⬇ Chrome extension – coming soon</a>
  </div>
- <p class="note">Free · no account · runs in your browser · version 1.13.0 · <a href="privacy.html">Privacy</a></p>
+ <p class="note">Free · no account · runs in your browser · version 1.13.1 · <a href="privacy.html">Privacy</a></p>
 </header>
+
+<section class="shots" aria-label="Examples">
+ <a href="guide.html"><img src="guide/ex-birthday.jpg" width="720" height="720" alt="Birthday wish made in Akuru Studio"></a>
+ <a href="guide.html"><img src="guide/ex-avurudu.jpg" width="720" height="720" alt="New Year wish made in Akuru Studio"></a>
+ <a href="guide.html"><img src="guide/ex-goodnight.jpg" width="720" height="720" alt="Good night post made in Akuru Studio"></a>
+</section>
 
 <section class="grid" aria-label="Features">
  <div class="card"><h3>✍️ Singlish to Sinhala</h3><p>Type the way you text – <i>suba upandhinayak</i> becomes සුබ උපන්දිනයක්. Old FM/KD fonts are converted automatically.</p></div>
@@ -61,7 +70,7 @@ footer a{color:var(--mut)}
 </section>
 </div>
 <footer>
- <div class="wrap">© 2026 Aduruge Software · <a href="mailto:aduruge@gmail.com">aduruge@gmail.com</a> · <a href="privacy.html">Privacy</a></div>
+ <div class="wrap">© 2026 Aduruge Software · <a href="mailto:aduruge@gmail.com">aduruge@gmail.com</a> · <a href="guide.html">Guide</a> · <a href="privacy.html">Privacy</a></div>
 </footer>
 </body>
 </html>
