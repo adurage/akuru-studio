@@ -34,6 +34,9 @@ h1{font-size:36px;line-height:1.2;margin:28px 0 6px;text-align:center}
 .feat.phone img{max-width:300px;margin:0 auto}
 .feat h2{margin:0 0 8px;font-size:22px;line-height:1.3}
 .feat p{margin:0;color:var(--mut)}
+.feat .how{margin:10px 0 0;padding-left:20px;color:var(--mut)}
+.feat .how li{margin:4px 0}
+.feat .how b{color:var(--txt)}
 .n{display:inline-flex;width:28px;height:28px;border-radius:99px;background:linear-gradient(90deg,var(--acc),var(--acc2));color:#1a0f12;font-weight:700;font-size:14px;align-items:center;justify-content:center;margin-right:8px;vertical-align:2px}
 .cta{text-align:center;margin:60px 0 40px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;font-weight:600;text-decoration:none;background:linear-gradient(90deg,var(--acc),var(--acc2));color:#1a0f12}
@@ -116,8 +119,8 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.la
  <figure><img src="guide/f-expand.jpg" width="390" height="780" loading="lazy" alt="Expand mode on a phone"></figure>
  <div>
   <h2><span class="n">6</span><span lang="en">Easy editing on your phone</span><span lang="si">දුරකථනයෙන් පහසුවෙන් සකසන්න</span></h2>
-  <p lang="en">Tap 🔍 Expand and the picture fills the screen. Move and resize text with your finger – upright or sideways. Tap ✓ Done to go back.</p>
-  <p lang="si">🔍 Expand ඔබන්න, පින්තූරය මුළු තිරයම පුරවයි. ඇඟිල්ලෙන් අකුරු ගෙනයන්න, ලොකු කරන්න – දුරකථනය කෙළින් හෝ හරස් අතට. ආපසු යන්න ✓ Done ඔබන්න.</p>
+  <p lang="en">Tap 🔍 Expand and the picture fills the screen. Move and resize text with your finger – upright or sideways. Tap ✓ Done to go back. Spread two fingers to zoom in, pinch to zoom out.</p>
+  <p lang="si">🔍 Expand ඔබන්න, පින්තූරය මුළු තිරයම පුරවයි. ඇඟිල්ලෙන් අකුරු ගෙනයන්න, ලොකු කරන්න – දුරකථනය කෙළින් හෝ හරස් අතට. ආපසු යන්න ✓ Done ඔබන්න. ඇඟිලි දෙකකින් විහිදුවා zoom කරන්න, හකුළා zoom out කරන්න.</p>
  </div>
 </section>
 
@@ -130,10 +133,29 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.la
  </div>
 </section>
 
+<section class="feat phone">
+ <figure><img src="guide/f-install.jpg" width="390" height="780" loading="lazy" alt="Install Akuru Studio as an app from the Share window"></figure>
+ <div>
+  <h2><span class="n">8</span><span lang="en">Install it as an app</span><span lang="si">App එකක් ලෙස දාගන්න</span></h2>
+  <p lang="en">Put Akuru Studio on your home screen – it opens full screen with its own අ icon and works without internet.</p>
+  <p lang="si">අකුරු Studio ඔබේ home screen එකට දාගන්න – සම්පූර්ණ තිරයෙන්, අ icon එකත් සමඟ විවෘත වේ, internet නැතිවත් වැඩ කරයි.</p>
+  <ul class="how" lang="en">
+   <li><b>Android (Chrome):</b> open the app, tap 💌 Share ▸ 📲 Install app – or Chrome's ⋮ menu ▸ Install app.</li>
+   <li><b>iPhone / iPad (Safari):</b> open the app in Safari, tap the Share button (the square with ⬆ – on iOS 26 tap ••• first, then Share), scroll down ▸ Add to Home Screen ▸ Add. Opened from WhatsApp? Tap its Safari/compass icon first.</li>
+   <li>On iPhone, ⬇ Save opens the share menu – choose <b>Save Image</b> to put your picture in Photos.</li>
+  </ul>
+  <ul class="how" lang="si">
+   <li><b>Android (Chrome):</b> app එක විවෘත කර 💌 Share ▸ 📲 Install app ඔබන්න – නැත්නම් Chrome හි ⋮ menu ▸ Install app.</li>
+   <li><b>iPhone / iPad (Safari):</b> app එක Safari හි විවෘත කර Share බොත්තම (⬆ සහිත කොටුව – iOS 26 හි මුලින් ••• ඔබා පසුව Share) ඔබන්න, පහළට scroll කර ▸ Add to Home Screen ▸ Add. WhatsApp එකෙන් විවෘත කළා නම්, මුලින් එහි Safari/compass icon එක ඔබන්න.</li>
+   <li>iPhone හි ⬇ Save ඔබූ විට share menu එක එයි – ඡායාරූපය Photos වලට දාන්න <b>Save Image</b> තෝරන්න.</li>
+  </ul>
+ </div>
+</section>
+
 <div class="cta"><a class="btn" href="app/"><span lang="en">✏️ Open Akuru Studio</span><span lang="si">✏️ අකුරු Studio විවෘත කරන්න</span></a>
  <p class="cap"><span lang="en">Free · no account · your photos never leave your device</span><span lang="si">නොමිලේ · ගිණුමක් අවශ්‍ය නැත · ඔබේ ඡායාරූප ඔබේ උපාංගයෙන් පිටතට යන්නේ නැත</span></p></div>
 </div>
-<footer><div class="wrap">© 2026 Aduruge Software · v1.17.0 · <a href="mailto:aduruge@gmail.com">aduruge@gmail.com</a> · <a href="privacy.html">Privacy</a></div></footer>
+<footer><div class="wrap">© 2026 Aduruge Software · v1.17.1 · <a href="mailto:aduruge@gmail.com">aduruge@gmail.com</a> · <a href="privacy.html">Privacy</a></div></footer>
 <script>
 (function(){var bs=document.querySelectorAll('.langs button');function set(l,save){document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;
 for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i].getAttribute('data-l')===l);if(save)try{localStorage.setItem('akuru-guide-lang',l)}catch(e){}}
