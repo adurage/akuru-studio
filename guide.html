@@ -55,7 +55,7 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.la
 </div>
 
 <h1><span lang="en">What you can make</span><span lang="si">ඔබට හදන්න පුළුවන් දේ</span></h1>
-<p class="tag"><span lang="en">Beautiful Sinhala posts in a few taps – here is how.</span><span lang="si">තට්ටු කිහිපයකින් ලස්සන සිංහල posts – මෙන්න මෙහෙමයි.</span></p>
+<p class="tag"><span lang="en">Beautiful Sinhala posts in a few taps – here is how.</span><span lang="si">clicks කිහිපයකින් ලස්සන සිංහල posts හදන්නේ මෙන්න මෙහෙමයි.</span></p>
 
 <section class="gal" aria-label="Examples">
  <img src="guide/ex-birthday.jpg" width="720" height="720" alt="Birthday wish: සුබ උපන්දිනයක් වේවා!">
@@ -133,11 +133,12 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.la
 <div class="cta"><a class="btn" href="app/"><span lang="en">✏️ Open Akuru Studio</span><span lang="si">✏️ අකුරු Studio විවෘත කරන්න</span></a>
  <p class="cap"><span lang="en">Free · no account · your photos never leave your device</span><span lang="si">නොමිලේ · ගිණුමක් අවශ්‍ය නැත · ඔබේ ඡායාරූප ඔබේ උපාංගයෙන් පිටතට යන්නේ නැත</span></p></div>
 </div>
-<footer><div class="wrap">© 2026 Aduruge Software · v1.13.2 · <a href="mailto:aduruge@gmail.com">aduruge@gmail.com</a> · <a href="privacy.html">Privacy</a></div></footer>
+<footer><div class="wrap">© 2026 Aduruge Software · v1.14.0 · <a href="mailto:aduruge@gmail.com">aduruge@gmail.com</a> · <a href="privacy.html">Privacy</a></div></footer>
 <script>
 (function(){var bs=document.querySelectorAll('.langs button');function set(l,save){document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;
 for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i].getAttribute('data-l')===l);if(save)try{localStorage.setItem('akuru-guide-lang',l)}catch(e){}}
 for(var i=0;i<bs.length;i++)bs[i].onclick=function(){set(this.getAttribute('data-l'),true)};set(document.documentElement.getAttribute('data-lang'))})();
 </script>
+<script>if(location.hostname==='adurage.github.io'){try{new Image().src='https://adurage.goatcounter.com/count?p='+encodeURIComponent(location.pathname)+'&t='+encodeURIComponent(document.title)+'&r='+encodeURIComponent(document.referrer)+'&s='+encodeURIComponent(screen.width+','+screen.height+','+(window.devicePixelRatio||1))+'&rnd='+Math.random().toString(36).slice(2)}catch(e){}}</script>
 </body>
 </html>
