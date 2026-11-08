@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Akuru Studio – Sinhala photo editor / post creator</title>
+<meta name="description" content="Type Singlish, get beautiful Sinhala text on your photos. Fonts, styles, stickers, frames, templates and print – free, private and works offline.">
+<link rel="icon" href="icon.png">
+<style>
+:root{--bg:#141219;--panel:#1d1a24;--line:#2e2938;--txt:#ece8f3;--mut:#a59db3;--acc:#ff8a5c;--acc2:#ff5c8a}
+*{box-sizing:border-box}html{color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 system-ui,-apple-system,"Segoe UI","Noto Sans Sinhala","Iskoola Pota",sans-serif}
+a{color:var(--acc)}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header{padding:56px 0 28px;text-align:center}
+header img{width:88px;height:88px;border-radius:20px}
+h1{font-size:40px;line-height:1.15;margin:16px 0 8px;font-weight:700}
+h1 b{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{color:var(--mut);font-size:18px;margin:0 auto;max-width:560px}
+.si{font-size:22px;margin:22px 0 4px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:28px 0 8px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;font-weight:600;text-decoration:none;border:1px solid var(--line);color:var(--txt);background:var(--panel)}
+.btn.pri{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#1a0f12;border:0}
+.btn.off{opacity:.6;pointer-events:none}
+.note{color:var(--mut);font-size:14px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:40px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+.card h3{margin:0 0 6px;font-size:17px}.card p{margin:0;color:var(--mut);font-size:15px}
+.priv{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:0 0 40px}
+.priv h2{margin:0 0 6px;font-size:20px}.priv p{margin:0;color:var(--mut)}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--mut);font-size:14px;text-align:center}
+footer a{color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+ <img src="icon.png" alt="Akuru Studio icon" width="88" height="88">
+ <h1><b>අකුරු</b> Studio</h1>
+ <p class="tag">Sinhala photo editor / post creator. Type Singlish, get beautiful Sinhala text on your photos.</p>
+ <p class="si">ammaa → අම්මා</p>
+ <div class="cta">
+  <a class="btn pri off" id="cws" href="#" aria-disabled="true">⬇ Add to Chrome – coming soon</a>
+  <a class="btn" href="privacy.html">🔒 Privacy policy</a>
+ </div>
+ <p class="note">Free · no account · works offline · version 1.11.0</p>
+</header>
+
+<section class="grid" aria-label="Features">
+ <div class="card"><h3>✍️ Singlish to Sinhala</h3><p>Type the way you text – <i>suba upandhinayak</i> becomes සුබ උපන්දිනයක්. Old FM/KD fonts are converted automatically.</p></div>
+ <div class="card"><h3>🎨 Styles &amp; fonts</h3><p>One-tap text styles, Sinhala and English fonts, outlines, shadows, glow and gradients. Add your own fonts too.</p></div>
+ <div class="card"><h3>🖼️ Post templates</h3><p>Ready-made designs and social-media sizes for WhatsApp, Facebook, Instagram, TikTok and print. Save your own templates.</p></div>
+ <div class="card"><h3>😊 Stickers &amp; drawing</h3><p>All phone emoji, your own PNG/SVG stickers, brushes and shapes, frames and photo effects.</p></div>
+ <div class="card"><h3>💾 Projects</h3><p>Your last design is kept for you. Save a project file to keep editing later on any device.</p></div>
+ <div class="card"><h3>🖨️ Save &amp; print</h3><p>Export PNG (also with a transparent background) or JPG, or print and save as PDF.</p></div>
+</section>
+
+<section class="priv">
+ <h2>🔒 Private by design</h2>
+ <p>Akuru Studio has no server and collects nothing – no account, no analytics, no tracking. Your photos and text never leave your device. <a href="privacy.html">Read the privacy policy</a>.</p>
+</section>
+</div>
+<footer>
+ <div class="wrap">© 2026 Aduruge Software · <a href="mailto:aduruge@gmail.com">aduruge@gmail.com</a> · <a href="privacy.html">Privacy</a></div>
+</footer>
+</body>
+</html>
