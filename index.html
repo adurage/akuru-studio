@@ -3,8 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Akuru Studio – Sinhala photo editor / post creator</title>
-<meta name="description" content="Type Singlish, get beautiful Sinhala text on your photos. Fonts, styles, stickers, frames, templates and print – free, private and works offline.">
+<title>Akuru Studio – beautiful text on your photos</title>
+<meta name="description" content="Put beautiful text on your photos in any language – or type Singlish and get Sinhala. Fonts, styles, stickers, frames, templates and print – free, private and works offline.">
+<script>
+/* Same editions as the app and the guide: 'si' (Sinhala) or 'intl' (International) – shared choice */
+(function(){var e='intl';try{var g=localStorage.getItem('akuru-guide-lang'),a=localStorage.getItem('akuru-edition');
+ if(g==='si'||g==='intl')e=g;else if(a==='si'||a==='intl')e=a;else{var ls=(navigator.languages||[navigator.language||'']).join(',').toLowerCase(),
+ tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||'');e=/(^|,)si(-|,|$)/.test(ls)||tz==='Asia/Colombo'||g==='en'?'si':'intl'}}catch(x){}
+ document.documentElement.setAttribute('data-ed',e)})();
+</script>
 <link rel="icon" href="icon.png">
 <style>
 :root{--bg:#141219;--panel:#1d1a24;--line:#2e2938;--txt:#ece8f3;--mut:#a59db3;--acc:#ff8a5c;--acc2:#ff5c8a}
@@ -32,6 +39,10 @@ h1 b{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background
 .priv h2{margin:0 0 6px;font-size:20px}.priv p{margin:0;color:var(--mut)}
 footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--mut);font-size:14px;text-align:center}
 footer a{color:var(--mut)}
+html[data-ed=intl] .ed-si,html[data-ed=si] .ed-intl{display:none!important}
+.eds{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;vertical-align:middle}
+.eds button{background:none;border:0;color:var(--mut);padding:4px 10px;font:inherit;font-size:13px;cursor:pointer}
+.eds button.on{background:var(--panel);color:var(--txt)}
 </style>
 </head>
 <body>
@@ -39,24 +50,32 @@ footer a{color:var(--mut)}
 <header>
  <img src="icon.png" alt="Akuru Studio icon" width="88" height="88">
  <h1><b>අකුරු</b> Studio</h1>
- <p class="tag">Sinhala photo editor / post creator. Type Singlish, get beautiful Sinhala text on your photos.</p>
- <p class="si">ammaa → අම්මා</p>
+ <p class="tag ed-si">Sinhala photo editor / post creator. Type Singlish, get beautiful Sinhala text on your photos.</p>
+ <p class="si ed-si">ammaa → අම්මා</p>
+ <p class="tag ed-intl">Beautiful text on your photos – in any language. Wishes, quotes, stories and posts in a few taps.</p>
+ <p class="si ed-intl">Happy birthday · ¡Feliz cumpleaños! · 生日快乐 · जन्मदिन मुबारक</p>
  <div class="cta">
   <a class="btn pri" href="app/">✏️ Open Akuru Studio</a>
   <a class="btn" href="guide.html">📖 Guide – what you can make</a>
   <a class="btn off" id="cws" href="#" aria-disabled="true">⬇ Chrome extension – coming soon</a>
  </div>
- <p class="note">Free · no account · runs in your browser · version 1.19.0 · <a href="privacy.html">Privacy</a></p>
+ <p class="note">Free · no account · runs in your browser · version 1.19.1 · <a href="privacy.html">Privacy</a></p>
 </header>
 
-<section class="shots" aria-label="Examples">
+<section class="shots ed-intl" aria-label="Examples">
+ <a href="guide.html"><img src="guide/ex-i-birthday.jpg" width="720" height="720" alt="Birthday wish made in Akuru Studio"></a>
+ <a href="guide.html"><img src="guide/ex-i-christmas.jpg" width="720" height="720" alt="Christmas card made in Akuru Studio"></a>
+ <a href="guide.html"><img src="guide/ex-i-lunar.jpg" width="720" height="720" alt="Lunar New Year wish made in Akuru Studio"></a>
+</section>
+<section class="shots ed-si" aria-label="Examples">
  <a href="guide.html"><img src="guide/ex-birthday.jpg" width="720" height="720" alt="Birthday wish made in Akuru Studio"></a>
  <a href="guide.html"><img src="guide/ex-avurudu.jpg" width="720" height="720" alt="New Year wish made in Akuru Studio"></a>
  <a href="guide.html"><img src="guide/ex-goodnight.jpg" width="720" height="720" alt="Good night post made in Akuru Studio"></a>
 </section>
 
 <section class="grid" aria-label="Features">
- <div class="card"><h3>✍️ Singlish to Sinhala</h3><p>Type the way you text – <i>suba upandhinayak</i> becomes සුබ උපන්දිනයක්. Old FM/KD fonts are converted automatically.</p></div>
+ <div class="card ed-intl"><h3>✍️ Any language</h3><p>Type with your own keyboard – English, Spanish, Hindi, Chinese, Tamil and more. Quick phrases in 10 languages. Sinhala users can type Singlish too.</p></div>
+ <div class="card ed-si"><h3>✍️ Singlish to Sinhala</h3><p>Type the way you text – <i>suba upandhinayak</i> becomes සුබ උපන්දිනයක්. Old FM/KD fonts are converted automatically.</p></div>
  <div class="card"><h3>🎨 Styles &amp; fonts</h3><p>One-tap text styles, Sinhala and English fonts, outlines, shadows, glow and gradients. Add your own fonts too.</p></div>
  <div class="card"><h3>🖼️ Post templates</h3><p>Ready-made designs and social-media sizes for WhatsApp, Facebook, Instagram, TikTok and print. Save your own templates.</p></div>
  <div class="card"><h3>😊 Stickers &amp; drawing</h3><p>All phone emoji, your own PNG/SVG stickers, brushes and shapes, frames and photo effects.</p></div>
@@ -70,8 +89,13 @@ footer a{color:var(--mut)}
 </section>
 </div>
 <footer>
- <div class="wrap">© 2026 Aduruge Software · <a href="mailto:aduruge@gmail.com">aduruge@gmail.com</a> · <a href="guide.html">Guide</a> · <a href="privacy.html">Privacy</a></div>
+ <div class="wrap">© 2026 Aduruge Software · <a href="mailto:aduruge@gmail.com">aduruge@gmail.com</a> · <a href="guide.html">Guide</a> · <a href="privacy.html">Privacy</a> · <span class="eds" role="group" aria-label="Edition"><button data-e="intl">International</button><button data-e="si">සිංහල</button></span></div>
 </footer>
+<script>
+(function(){var bs=document.querySelectorAll('.eds button'),h=document.documentElement;function set(e,save){h.setAttribute('data-ed',e);
+for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i].getAttribute('data-e')===e);if(save)try{localStorage.setItem('akuru-guide-lang',e);localStorage.setItem('akuru-edition',e)}catch(x){}}
+for(var i=0;i<bs.length;i++)bs[i].onclick=function(){set(this.getAttribute('data-e'),true)};set(h.getAttribute('data-ed'))})();
+</script>
 <script>if(location.hostname==='adurage.github.io'){try{new Image().src='https://adurage.goatcounter.com/count?p='+encodeURIComponent(location.pathname)+'&t='+encodeURIComponent(document.title)+'&r='+encodeURIComponent(document.referrer)+'&s='+encodeURIComponent(screen.width+','+screen.height+','+(window.devicePixelRatio||1))+'&rnd='+Math.random().toString(36).slice(2)}catch(e){}}</script>
 </body>
 </html>

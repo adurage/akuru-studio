@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Guide – Akuru Studio</title>
-<meta name="description" content="See what you can make with Akuru Studio: Sinhala text on photos, styles, templates, stickers, frames and more. English and Sinhala.">
+<meta name="description" content="See what you can make with Akuru Studio: beautiful text on your photos in any language (and Singlish → Sinhala), styles, templates, stickers, frames and more.">
 <link rel="icon" href="icon.png">
 <style>
 :root{--bg:#141219;--panel:#1d1a24;--line:#2e2938;--txt:#ece8f3;--mut:#a59db3;--acc:#ff8a5c;--acc2:#ff5c8a}
 *{box-sizing:border-box}html{color-scheme:dark}
 body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.7 system-ui,-apple-system,"Segoe UI","Noto Sans Sinhala","Iskoola Pota",sans-serif}
 a{color:var(--acc)}
-html[data-lang=en] [lang=si],html[data-lang=si] [lang=en]{display:none!important}
+html[data-lang=en] [lang=si],html[data-lang=si] [lang=en],html[data-ed=intl] .ed-si,html[data-ed=si] .ed-intl{display:none!important}
 .wrap{max-width:980px;margin:0 auto;padding:0 20px}
 .top{display:flex;align-items:center;gap:12px;padding:16px 0}
 .top a.home{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--txt);font-weight:600}
@@ -45,8 +45,12 @@ footer a{color:var(--mut)}
 @media(max-width:720px){h1{font-size:28px}.gal{grid-template-columns:repeat(2,1fr)}.feat,.feat:nth-of-type(even),.feat.phone{grid-template-columns:1fr;gap:14px;margin:40px 0}.feat:nth-of-type(even) figure{order:0}}
 </style>
 <script>
-(function(){var l='en';try{l=localStorage.getItem('akuru-guide-lang')||((navigator.language||'').toLowerCase().indexOf('si')===0?'si':'en')}catch(e){}
-document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l})();
+/* Same editions as the app: 'si' (Sinhala) or 'intl' (International, in English). A choice made here or in the app
+   (Help ▸ About) is shared, so the app opens in the edition shown here. */
+(function(){var e='intl';try{var g=localStorage.getItem('akuru-guide-lang'),a=localStorage.getItem('akuru-edition');
+ if(g==='si'||g==='intl')e=g;else if(a==='si'||a==='intl')e=a;else{var ls=(navigator.languages||[navigator.language||'']).join(',').toLowerCase(),
+ tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||'');e=/(^|,)si(-|,|$)/.test(ls)||tz==='Asia/Colombo'||g==='en'?'si':'intl'}}catch(x){}
+ var h=document.documentElement;h.setAttribute('data-ed',e);h.setAttribute('data-lang',e==='si'?'si':'en');h.lang=e==='si'?'si':'en'})();
 </script>
 </head>
 <body>
@@ -54,13 +58,21 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.la
 <div class="top">
  <a class="home" href="./"><img src="icon.png" alt="" width="32" height="32"><span>අකුරු Studio</span></a>
  <span class="sp"></span>
- <div class="langs" role="group" aria-label="Language"><button data-l="en">English</button><button data-l="si">සිංහල</button></div>
+ <div class="langs" role="group" aria-label="Edition"><button data-e="intl">International</button><button data-e="si">සිංහල</button></div>
 </div>
 
 <h1><span lang="en">What you can make</span><span lang="si">ඔබට හදන්න පුළුවන් දේ</span></h1>
-<p class="tag"><span lang="en">Beautiful Sinhala posts in a few taps – here is how.</span><span lang="si">clicks කිහිපයකින් ලස්සන සිංහල posts හදන්නේ මෙන්න මෙහෙමයි.</span></p>
+<p class="tag"><span lang="en" class="ed-intl">Beautiful text on your photos, in any language – here is how.</span><span lang="en" class="ed-si">Beautiful Sinhala posts in a few taps – here is how.</span><span lang="si">clicks කිහිපයකින් ලස්සන සිංහල posts හදන්නේ මෙන්න මෙහෙමයි.</span></p>
 
-<section class="gal" aria-label="Examples">
+<section class="gal ed-intl" aria-label="Examples">
+ <img src="guide/ex-i-birthday.jpg" width="720" height="720" alt="Birthday wish in Spanish: ¡Feliz cumpleaños!">
+ <img src="guide/ex-i-christmas.jpg" width="720" height="720" alt="Merry Christmas card">
+ <img src="guide/ex-i-diwali.jpg" width="720" height="720" alt="Diwali wish in Hindi and English">
+ <img src="guide/ex-i-lunar.jpg" width="720" height="720" alt="Lunar New Year wish in Chinese: 新年快乐" loading="lazy">
+ <img src="guide/ex-i-morning.jpg" width="720" height="720" alt="Good morning in Dutch: Goedemorgen" loading="lazy">
+ <img src="guide/ex-i-motivation.jpg" width="720" height="720" alt="Motivation quote: Dream big" loading="lazy">
+</section>
+<section class="gal ed-si" aria-label="Examples">
  <img src="guide/ex-birthday.jpg" width="720" height="720" alt="Birthday wish: සුබ උපන්දිනයක් වේවා!">
  <img src="guide/ex-avurudu.jpg" width="720" height="720" alt="New Year wish: සුබ අලුත් අවුරුද්දක් වේවා!">
  <img src="guide/ex-goodnight.jpg" width="720" height="720" alt="Good night: සුබ රාත්‍රියක්">
@@ -70,7 +82,15 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.la
 </section>
 <p class="cap"><span lang="en">All made in Akuru Studio with its own templates, styles and emoji.</span><span lang="si">සියල්ල අකුරු Studio එකේම templates, මෝස්තර සහ emoji වලින් හැදුවා.</span></p>
 
-<section class="feat">
+<section class="feat ed-intl">
+ <figure><img src="guide/f-i-typing.jpg" width="1280" height="800" loading="lazy" alt="Typing ¡Feliz cumpleaños! with Quick phrases in many languages"></figure>
+ <div>
+  <h2><span class="n">1</span>Type in any language</h2>
+  <p>Use your own keyboard – English, Spanish, Hindi, Chinese, Tamil, Sinhala… what you type is what you get. Or tap a Quick phrase: they come in your phone's language plus English, with 10 languages to choose from.</p>
+ </div>
+</section>
+
+<section class="feat ed-si">
  <figure><img src="guide/f-typing.jpg" width="1280" height="800" loading="lazy" alt="Typing aadhareyi ammee shows ආදරෙයි අම්මේ on the picture"></figure>
  <div>
   <h2><span class="n">1</span><span lang="en">Type Singlish, get Sinhala</span><span lang="si">Singlish වලින් ටයිප් කරන්න, සිංහල ලැබේ</span></h2>
@@ -83,16 +103,16 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.la
  <figure><img src="guide/f-styles.jpg" width="1280" height="800" loading="lazy" alt="One-tap text styles"></figure>
  <div>
   <h2><span class="n">2</span><span lang="en">One-tap styles and fonts</span><span lang="si">එක තට්ටුවෙන් ලස්සන අකුරු</span></h2>
-  <p lang="en">32 ready styles – outline, glow, gold, neon and boxes. Change the font, colour and size, or add your own fonts. Old FM fonts work too.</p>
+  <p lang="en">32 ready styles – outline, glow, gold, neon and boxes. Change the font, colour and size, or add your own fonts.<span class="ed-si"> Old FM fonts work too.</span></p>
   <p lang="si">සූදානම් මෝස්තර 32ක් – outline, glow, රන්වන්, neon සහ කොටු. අකුරු වර්ගය, පාට සහ ප්‍රමාණය වෙනස් කරන්න, නැත්නම් ඔබේම fonts එකතු කරන්න. පරණ FM fonts ද වැඩ කරයි.</p>
  </div>
 </section>
 
 <section class="feat">
- <figure><img src="guide/f-templates.jpg" width="1280" height="800" loading="lazy" alt="Post templates"></figure>
+ <figure><img class="ed-si" src="guide/f-templates.jpg" width="1280" height="800" loading="lazy" alt="Post templates"><img class="ed-intl" src="guide/f-i-templates.jpg" width="1280" height="800" loading="lazy" alt="Post templates: birthday, Christmas, Eid, Diwali, Lunar New Year and more"></figure>
  <div>
   <h2><span class="n">3</span><span lang="en">Post templates and social sizes</span><span lang="si">Post templates සහ social media ප්‍රමාණ</span></h2>
-  <p lang="en">Pick a template for a WhatsApp status, Facebook, Instagram or print. Like your own look? Save it under My templates.</p>
+  <p lang="en">Pick a template for a WhatsApp status, Facebook, Instagram or print<span class="ed-intl"> – everyday wishes, festivals from Christmas to Diwali, stories and meme captions</span>. Like your own look? Save it under My templates.</p>
   <p lang="si">WhatsApp status, Facebook, Instagram හෝ print සඳහා template එකක් තෝරන්න. ඔබ හදපු මෝස්තරයට කැමතිද? My templates වල සුරකින්න.</p>
  </div>
 </section>
@@ -137,7 +157,7 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.la
  <figure><img src="guide/f-install.jpg" width="390" height="780" loading="lazy" alt="Install Akuru Studio as an app from the Share window"></figure>
  <div>
   <h2><span class="n">8</span><span lang="en">Install it as an app</span><span lang="si">App එකක් ලෙස දාගන්න</span></h2>
-  <p lang="en">Put Akuru Studio on your home screen – it opens full screen with its own අ icon and works without internet.</p>
+  <p lang="en">Put Akuru Studio on your home screen – it opens full screen with its own icon and works without internet.</p>
   <p lang="si">අකුරු Studio ඔබේ home screen එකට දාගන්න – සම්පූර්ණ තිරයෙන්, අ icon එකත් සමඟ විවෘත වේ, internet නැතිවත් වැඩ කරයි.</p>
   <ul class="how" lang="en">
    <li><b>Android (Chrome):</b> open the app, tap 💌 Share ▸ 📲 Install app – or Chrome's ⋮ menu ▸ Install app.</li>
@@ -155,11 +175,11 @@ document.documentElement.setAttribute('data-lang',l);document.documentElement.la
 <div class="cta"><a class="btn" href="app/"><span lang="en">✏️ Open Akuru Studio</span><span lang="si">✏️ අකුරු Studio විවෘත කරන්න</span></a>
  <p class="cap"><span lang="en">Free · no account · your photos never leave your device</span><span lang="si">නොමිලේ · ගිණුමක් අවශ්‍ය නැත · ඔබේ ඡායාරූප ඔබේ උපාංගයෙන් පිටතට යන්නේ නැත</span></p></div>
 </div>
-<footer><div class="wrap">© 2026 Aduruge Software · v1.19.0 · <a href="mailto:aduruge@gmail.com">aduruge@gmail.com</a> · <a href="privacy.html">Privacy</a></div></footer>
+<footer><div class="wrap">© 2026 Aduruge Software · v1.19.1 · <a href="mailto:aduruge@gmail.com">aduruge@gmail.com</a> · <a href="privacy.html">Privacy</a></div></footer>
 <script>
-(function(){var bs=document.querySelectorAll('.langs button');function set(l,save){document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;
-for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i].getAttribute('data-l')===l);if(save)try{localStorage.setItem('akuru-guide-lang',l)}catch(e){}}
-for(var i=0;i<bs.length;i++)bs[i].onclick=function(){set(this.getAttribute('data-l'),true)};set(document.documentElement.getAttribute('data-lang'))})();
+(function(){var bs=document.querySelectorAll('.langs button'),h=document.documentElement;function set(e,save){h.setAttribute('data-ed',e);h.setAttribute('data-lang',e==='si'?'si':'en');h.lang=e==='si'?'si':'en';
+for(var i=0;i<bs.length;i++)bs[i].classList.toggle('on',bs[i].getAttribute('data-e')===e);if(save)try{localStorage.setItem('akuru-guide-lang',e);localStorage.setItem('akuru-edition',e)}catch(x){}}
+for(var i=0;i<bs.length;i++)bs[i].onclick=function(){set(this.getAttribute('data-e'),true)};set(h.getAttribute('data-ed'))})();
 </script>
 <script>if(location.hostname==='adurage.github.io'){try{new Image().src='https://adurage.goatcounter.com/count?p='+encodeURIComponent(location.pathname)+'&t='+encodeURIComponent(document.title)+'&r='+encodeURIComponent(document.referrer)+'&s='+encodeURIComponent(screen.width+','+screen.height+','+(window.devicePixelRatio||1))+'&rnd='+Math.random().toString(36).slice(2)}catch(e){}}</script>
 </body>
